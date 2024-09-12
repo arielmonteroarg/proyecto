@@ -1,0 +1,268 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos del body */
+body {
+    background-color: #A2AAA9;
+}
+
+/* estilos menu de nav */
+header {
+    background-color: #343434;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 50px;
+
+    padding: 15px;
+}
+
+/* estilos globales del sitio */
+main h1,
+main h2,
+main p {
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+main p span {
+    color: red;
+}
+
+/* estilos del Footer */
+
+footer p {
+    text-align: center;
+    color: whitesmoke;
+    padding: 20px;
+    background-color: #343434;
+}
+
+
+
+
+/* estilos del html EVENTO */
+.evento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+.formularioEvento {
+    background-color: #343434;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.formularioEvento h2 {
+    margin-bottom: 15px;
+}
+.formularioEvento p {
+    margin-bottom: 15px;
+}
+.formularioEvento img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.formularioEvento .boton {
+    border-radius: 15px;
+    background-color: #F6AB02;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.formularioEvento .boton:hover {
+    background-color: #e39b02;
+}
+
+@media (min-width: 768px) {
+    .evento {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 0 50px;
+    }
+    .formularioEvento {
+        padding: 30px;
+    }
+}
+
+
+
+
+/* Stilos del html contacto  */
+.formContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+form {
+    width: 100%;
+    color:  whitesmoke;
+}
+form fieldset {
+    border: none;
+}
+form legend {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formContacto .boton {
+    width: 100%;
+    padding: 10px;
+    background-color: #F6AB02;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: #e39b02;
+}
+@media (min-width: 768px) {
+    .formContacto {
+        max-width: 800px;
+    }
+
+    form legend {
+        font-size: 28px;
+    }
+}
+
+
+
+
+/* Estilos del html registro.html */
+.formRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+form {
+    width: 100%;
+}
+form fieldset {
+    border: none;
+}
+form legend {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formRegistro .boton {
+    width: 100%;
+    padding: 10px;
+    background-color: #F6AB02;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: #e39b02;
+}
+@media (min-width: 768px) {
+    .formRegistro {
+        max-width: 800px;
+    }
+    form legend {
+        font-size: 28px;
+    }
+}
+
+
+/* estilos de miscompras.html */
+h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card-img-top {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+}
+.card-title {
+    font-size: 1.5rem;
+    color: #343434;
+}
+.card-text {
+    color: #6c757d;
+}
+.card .boton {
+    border-radius: 15px;
+    background-color: #F6AB02;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+}
+.card .boton:hover {
+    background-color: #e39b02;
+}
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 1.75rem;
+    }
+}
