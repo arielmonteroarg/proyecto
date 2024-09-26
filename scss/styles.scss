@@ -1,0 +1,257 @@
+
+//import
+@import "utilidades/variables";
+@import "utilidades/extend";
+
+/* reset global del sitio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* estilos del body */
+  body {
+    background-color: $background-color;
+  }
+ /* estilos del header */
+  header {
+    background-color: $background-color-card;
+    padding: 30px;
+    text-align: center;
+  
+    nav {
+      ul {
+        list-style: none;
+  
+        li {
+          display: inline;
+          margin-left: 50px;
+          padding: 15px;
+  
+          a {
+            text-decoration: none;
+            color: $link-color;
+  
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+    }
+  }
+  
+ /* estilos globales del sitio */
+  main {
+    h1, h2, p {
+      text-align: center;
+      color: $text-color;
+      padding: 10px;
+    }
+// Definición de colores
+$color-red: red;
+$color-tomato: tomato;
+$link-hover-color: #e39b02; // Un color dorado
+
+p span {
+  a {
+    color: $color-red;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $color-red;
+    transition: all 0.3s ease;
+
+    &:hover {
+      animation: animar_enlace 0.5s forwards;
+    }
+  }
+}
+
+// Animación del enlace
+@keyframes animar_enlace {
+  0% {
+    color: red;
+    border-bottom-color: red;
+    transform: translateY(0);
+  }
+  50% {
+    color: tomato;
+    transform: translateY(-5px);
+    border-bottom-color: tomato;
+  }
+  100% {
+    color: #e39b02;
+    border-bottom-color: #e39b02;
+    transform: translateY(0);
+  }
+  }
+}
+ /* estilos del footer */
+  footer {
+    background-color: transparent;  // Deja que el degradado continúe hasta el final
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    p {
+      text-align: center;
+      color: $text-color;
+      padding: 20px;
+      background-color: $footer-background-color;
+    }
+  }
+/* estilos del html EVENTO */
+.evento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 $padding-mobile;
+  
+    .formularioEvento {
+      background-color: $background-color-card;
+      color: $text-color;
+      padding: $padding-mobile;
+      text-align: center;
+      border-radius: 10px;
+  
+      h2 {
+        margin-bottom: 15px;
+      }
+  
+      p {
+        margin-bottom: 15px;
+      }
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+  
+      .boton {
+        border-radius: 15px;
+        background-color: $button-color;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: $button-hover-color;
+        }
+      }
+    }
+    // Media Query para tabletas
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 0 $padding-tablet;
+        .formularioEvento {
+        padding: $padding-tablet;
+        }
+    }
+    // Media Query para pantallas grandes
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 0 $padding-desktop;
+
+        .formularioEvento {
+        padding: $padding-desktop;
+        }
+    }
+}
+
+/* estilos del formulario de contacto y del form. registro versiion UNIFICADA  con  @extend */
+
+
+// Aplicar el estilo a ambos formularios
+.formRegistro {
+    @extend %formulario;
+}
+
+.formContacto {
+    @extend %formulario;
+}
+
+  
+
+/* Contenedor de la tarjeta con grid */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna por defecto */
+  gap: 2rem;
+
+  @media (min-width: $max-width-tablet) {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tablets */
+  }
+
+  @media (min-width: $max-width-desktop) {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para escritorio */
+  }
+}
+
+/* Estilos para las tarjetas */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto; /* Mantiene la altura automática */
+    object-fit: cover;
+    min-height: 200px; /* Altura mínima */
+    max-height: 250px; /* Altura máxima */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    color: #343434;
+  }
+
+  .card-text {
+    color: #6c757d;
+  }
+
+  .boton {
+    border-radius: 15px;
+    background-color: #F6AB02;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e39b02;
+    }
+  }
+}
+
+/* Estilos adicionales para la responsividad */
+@media (max-width: $max-width-mobile) {
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-img-top {
+    min-height: 150px; /* Ajuste para pantallas pequeñas */
+    max-height: 200px;
+  }
+}

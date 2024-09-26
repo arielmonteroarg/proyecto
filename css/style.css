@@ -1,268 +1,273 @@
-/* RESET */
+@charset "UTF-8";
+.formContacto, .formRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343434;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.formContacto form, .formRegistro form {
+  width: 100%;
+  color: whitesmoke;
+}
+.formContacto form fieldset, .formRegistro form fieldset {
+  border: none;
+}
+.formContacto form legend, .formRegistro form legend {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.formContacto form .form-group, .formRegistro form .form-group {
+  margin-bottom: 15px;
+}
+.formContacto form .form-control, .formRegistro form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.formContacto form .boton, .formRegistro form .boton {
+  width: 100%;
+  padding: 10px;
+  background-color: #F6AB02;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.formContacto form .boton:hover, .formRegistro form .boton:hover {
+  background-color: #e39b02;
+}
+@media (min-width: 768px) {
+  .formContacto, .formRegistro {
+    max-width: 800px;
+  }
+  .formContacto form legend, .formRegistro form legend {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .formContacto, .formRegistro {
+    max-width: 900px;
+    padding: 40px;
+  }
+}
+
+/* reset global del sitio */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* estilos del body */
 body {
-    background-color: #A2AAA9;
+  background-color: #A2AAA9;
 }
 
-/* estilos menu de nav */
+/* estilos del header */
 header {
-    background-color: #343434;
-    padding: 30px;
-    text-align: center;
+  background-color: #343434;
+  padding: 30px;
+  text-align: center;
 }
-
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 60px;
-}
-
 header nav ul {
-    list-style: none;
+  list-style: none;
 }
-
+header nav ul li {
+  display: inline;
+  margin-left: 50px;
+  padding: 15px;
+}
 header nav ul li a {
-    text-decoration: none;
-    color: whitesmoke;
+  text-decoration: none;
+  color: whitesmoke;
 }
-
-header ul li {
-    display: inline;
-    margin-left: 50px;
-
-    padding: 15px;
+header nav ul li a:hover {
+  color: #e39b02;
+}
+header .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
 }
 
 /* estilos globales del sitio */
-main h1,
-main h2,
-main p {
-    text-align: center;
-    color: whitesmoke;
-    padding: 10px;
+main h1, main h2, main p {
+  text-align: center;
+  color: whitesmoke;
+  padding: 10px;
 }
-
-main p span {
+main p span a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid red;
+  transition: all 0.3s ease;
+}
+main p span a:hover {
+  animation: animar_enlace 0.5s forwards;
+}
+@keyframes animar_enlace {
+  0% {
     color: red;
+    border-bottom-color: red;
+    transform: translateY(0);
+  }
+  50% {
+    color: tomato;
+    transform: translateY(-5px);
+    border-bottom-color: tomato;
+  }
+  100% {
+    color: #e39b02;
+    border-bottom-color: #e39b02;
+    transform: translateY(0);
+  }
 }
 
-/* estilos del Footer */
-
+/* estilos del footer */
+footer {
+  background-color: transparent;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 footer p {
-    text-align: center;
-    color: whitesmoke;
-    padding: 20px;
-    background-color: #343434;
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+  background-color: #343434;
 }
-
-
-
 
 /* estilos del html EVENTO */
 .evento {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 20px;
 }
-.formularioEvento {
-    background-color: #343434;
-    color: whitesmoke;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
+.evento .formularioEvento {
+  background-color: #343434;
+  color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
 }
-.formularioEvento h2 {
-    margin-bottom: 15px;
+.evento .formularioEvento h2 {
+  margin-bottom: 15px;
 }
-.formularioEvento p {
-    margin-bottom: 15px;
+.evento .formularioEvento p {
+  margin-bottom: 15px;
 }
-.formularioEvento img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.evento .formularioEvento img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
-.formularioEvento .boton {
-    border-radius: 15px;
-    background-color: #F6AB02;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.evento .formularioEvento .boton {
+  border-radius: 15px;
+  background-color: #F6AB02;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
-.formularioEvento .boton:hover {
-    background-color: #e39b02;
+.evento .formularioEvento .boton:hover {
+  background-color: #e39b02;
 }
-
 @media (min-width: 768px) {
-    .evento {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        padding: 0 50px;
-    }
-    .formularioEvento {
-        padding: 30px;
-    }
-}
-
-
-
-
-/* Stilos del html contacto  */
-.formContacto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #343434;
+  .evento {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 30px;
+  }
+  .evento .formularioEvento {
     padding: 30px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
+  }
 }
-form {
-    width: 100%;
-    color:  whitesmoke;
-}
-form fieldset {
-    border: none;
-}
-form legend {
-    text-align: center;
-    color: whitesmoke;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.formContacto .boton {
-    width: 100%;
-    padding: 10px;
-    background-color: #F6AB02;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-.boton:hover {
-    background-color: #e39b02;
-}
-@media (min-width: 768px) {
-    .formContacto {
-        max-width: 800px;
-    }
-
-    form legend {
-        font-size: 28px;
-    }
+@media (min-width: 1024px) {
+  .evento {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 40px;
+  }
+  .evento .formularioEvento {
+    padding: 40px;
+  }
 }
 
-
-
-
-/* Estilos del html registro.html */
-.formRegistro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #343434;
-    padding: 30px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
+/* estilos del formulario de contacto y del form. registro versiion UNIFICADA  con  @extend */
+/* Contenedor de la tarjeta con grid */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna por defecto */
+  gap: 2rem;
 }
-form {
-    width: 100%;
+@media (min-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tablets */
+  }
 }
-form fieldset {
-    border: none;
-}
-form legend {
-    text-align: center;
-    color: whitesmoke;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.formRegistro .boton {
-    width: 100%;
-    padding: 10px;
-    background-color: #F6AB02;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-.boton:hover {
-    background-color: #e39b02;
-}
-@media (min-width: 768px) {
-    .formRegistro {
-        max-width: 800px;
-    }
-    form legend {
-        font-size: 28px;
-    }
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para escritorio */
+  }
 }
 
-
-/* estilos de miscompras.html */
-h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
+/* Estilos para las tarjetas */
 .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-.card-img-top {
-    width: 100%; 
-    height: 250px; 
-    object-fit: cover; 
+.card:hover {
+  transform: scale(1.05);
 }
-.card-title {
-    font-size: 1.5rem;
-    color: #343434;
+.card .card-img-top {
+  width: 100%;
+  height: auto; /* Mantiene la altura automática */
+  object-fit: cover;
+  min-height: 200px; /* Altura mínima */
+  max-height: 250px; /* Altura máxima */
 }
-.card-text {
-    color: #6c757d;
+.card .card-title {
+  font-size: 1.5rem;
+  color: #343434;
+}
+.card .card-text {
+  color: #6c757d;
 }
 .card .boton {
-    border-radius: 15px;
-    background-color: #F6AB02;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-
+  border-radius: 15px;
+  background-color: #F6AB02;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 .card .boton:hover {
-    background-color: #e39b02;
+  background-color: #e39b02;
 }
-@media (min-width: 768px) {
-    .card-title {
-        font-size: 1.75rem;
-    }
+
+/* Estilos adicionales para la responsividad */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-img-top {
+    min-height: 150px; /* Ajuste para pantallas pequeñas */
+    max-height: 200px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
