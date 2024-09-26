@@ -240,13 +240,156 @@ p span {
   h2 {
     font-size: 1.75rem;
   }
-
   .card-title {
     font-size: 1.25rem;
   }
-
   .card-img-top {
-    min-height: 150px; /* Ajuste para pantallas pequeñas */
+    min-height: 150px; 
     max-height: 200px;
   }
 }
+
+@mixin responsive($device) {
+  @if $device == mobile {
+    @media (max-width: $max-width-mobile) { 
+      @content;
+    }
+  } @else if $device == tablet {
+    @media (min-width: $max-width-mobile) and (max-width: $max-width-tablet) { 
+      @content;
+    }
+  } @else if $device == desktop {
+    @media (min-width: $max-width-tablet) { 
+      @content;
+    }
+  }
+}
+
+// Mixin para estilos de sectores
+@mixin sector-style($color, $hover-color) {
+    background-color: $color;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// Detalle de Compra Page Styles
+.detalleCompra {
+  padding: $padding-mobile;
+  h2, h3 {
+      color: $text-color;
+      margin-bottom: 1.5rem;
+  }
+  // Imagen del evento
+  .evento-info {
+      img {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: box-shadow-dynamic(8px, 15px);
+      }
+      p {
+          font-size: 1.25rem;
+          color: $text-color;
+      }
+  }
+  // Croquis del estadio
+  .croquis {
+      margin-top: 2rem;
+      text-align: center;
+
+      img {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: box-shadow-dynamic(6px, 10px);
+      }
+  }
+
+  // Lista de precios por sector
+  .precios {
+      ul.list-group {
+          margin-top: 2rem;
+
+          li {
+              color: $text-color;
+              padding: 1rem;
+              font-size: 1.25rem;
+              border-radius: 5px;
+              margin-bottom: 10px;
+              border: 1px solid $text-color;
+              transition: background-color 0.3s ease;
+          }
+
+          // Estilos para cada sector utilizando el mixin
+          .sector-preferida {
+              @include sector-style(#f7e315, darken(#f7e315, 10%));
+          }
+          .sector-central {
+              @include sector-style(#e94598, darken(#e94598, 10%));
+          }
+          .sector-platea {
+              @include sector-style(#4cb9e3, darken(#4cb9e3, 10%));
+          }
+          .sector-madero-baja {
+              @include sector-style(#53b848, darken(#53b848, 10%));
+          }
+          .sector-super-pullman {
+              @include sector-style(#e9327d, darken(#e9327d, 10%));
+          }
+          .sector-madero-alta {
+              @include sector-style(#2a4b8d, darken(#2a4b8d, 10%));
+          }
+          .sector-corrientes-alta {
+              @include sector-style(#d63d30, darken(#d63d30, 10%));
+          }
+          .sector-cabecera {
+              @include sector-style(#f37c22, darken(#f37c22, 10%));
+          }
+      }
+  }
+
+  // Media Queries utilizando el mixin
+  @include responsive(tablet) {
+      padding: $padding-tablet;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px; // Espacio entre columnas
+      h2 {
+          font-size: 2.5rem;
+          grid-column: span 3; // El título abarca las tres columnas
+      }
+      h3 {
+          font-size: 2rem;
+      }
+      .evento-info, .croquis, .precios {
+          margin-top: 0;
+          width: 100%;
+      }
+      .croquis img {
+          width: 100%;
+      }
+  }
+
+  @include responsive(desktop) {
+      padding: $padding-desktop;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px; 
+      h2 {
+          font-size: 3rem;
+          grid-column: span 3; 
+      }
+      h3 {
+          font-size: 2.5rem;
+      }
+      .evento-info, .croquis, .precios {
+          margin-top: 0;
+          width: 100%;
+      }
+      .croquis img {
+          width: 100%;
+      }
+  }
+}
+
+
+

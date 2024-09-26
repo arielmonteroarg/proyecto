@@ -265,8 +265,137 @@ footer p {
     font-size: 1.25rem;
   }
   .card-img-top {
-    min-height: 150px; /* Ajuste para pantallas pequeñas */
+    min-height: 150px;
     max-height: 200px;
+  }
+}
+.detalleCompra {
+  padding: 20px;
+}
+.detalleCompra h2, .detalleCompra h3 {
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+}
+.detalleCompra .evento-info img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: box-shadow-dynamic(8px, 15px);
+}
+.detalleCompra .evento-info p {
+  font-size: 1.25rem;
+  color: whitesmoke;
+}
+.detalleCompra .croquis {
+  margin-top: 2rem;
+  text-align: center;
+}
+.detalleCompra .croquis img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: box-shadow-dynamic(6px, 10px);
+}
+.detalleCompra .precios ul.list-group {
+  margin-top: 2rem;
+}
+.detalleCompra .precios ul.list-group li {
+  color: whitesmoke;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid whitesmoke;
+  transition: background-color 0.3s ease;
+}
+.detalleCompra .precios ul.list-group .sector-preferida {
+  background-color: #f7e315;
+}
+.detalleCompra .precios ul.list-group .sector-preferida:hover {
+  background-color: rgb(209.826446281, 191.8925619835, 7.173553719);
+}
+.detalleCompra .precios ul.list-group .sector-central {
+  background-color: #e94598;
+}
+.detalleCompra .precios ul.list-group .sector-central:hover {
+  background-color: rgb(224.4519230769, 26.5480769231, 126.7067307692);
+}
+.detalleCompra .precios ul.list-group .sector-platea {
+  background-color: #4cb9e3;
+}
+.detalleCompra .precios ul.list-group .sector-platea:hover {
+  background-color: rgb(34.0869565217, 166.7826086957, 217.9130434783);
+}
+.detalleCompra .precios ul.list-group .sector-madero-baja {
+  background-color: #53b848;
+}
+.detalleCompra .precios ul.list-group .sector-madero-baja:hover {
+  background-color: rgb(66.1811023622, 147.6968503937, 57.3031496063);
+}
+.detalleCompra .precios ul.list-group .sector-super-pullman {
+  background-color: #e9327d;
+}
+.detalleCompra .precios ul.list-group .sector-super-pullman:hover {
+  background-color: rgb(209.5154185022, 22.4845814978, 99.1365638767);
+}
+.detalleCompra .precios ul.list-group .sector-madero-alta {
+  background-color: #2a4b8d;
+}
+.detalleCompra .precios ul.list-group .sector-madero-alta:hover {
+  background-color: rgb(30.2950819672, 54.0983606557, 101.7049180328);
+}
+.detalleCompra .precios ul.list-group .sector-corrientes-alta {
+  background-color: #d63d30;
+}
+.detalleCompra .precios ul.list-group .sector-corrientes-alta:hover {
+  background-color: rgb(176.1169354839, 45.9435483871, 34.8830645161);
+}
+.detalleCompra .precios ul.list-group .sector-cabecera {
+  background-color: #f37c22;
+}
+.detalleCompra .precios ul.list-group .sector-cabecera:hover {
+  background-color: rgb(214.3605150215, 98.9356223176, 11.6394849785);
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .detalleCompra {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .detalleCompra h2 {
+    font-size: 2.5rem;
+    grid-column: span 3;
+  }
+  .detalleCompra h3 {
+    font-size: 2rem;
+  }
+  .detalleCompra .evento-info, .detalleCompra .croquis, .detalleCompra .precios {
+    margin-top: 0;
+    width: 100%;
+  }
+  .detalleCompra .croquis img {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .detalleCompra {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .detalleCompra h2 {
+    font-size: 3rem;
+    grid-column: span 3;
+  }
+  .detalleCompra h3 {
+    font-size: 2.5rem;
+  }
+  .detalleCompra .evento-info, .detalleCompra .croquis, .detalleCompra .precios {
+    margin-top: 0;
+    width: 100%;
+  }
+  .detalleCompra .croquis img {
+    width: 100%;
   }
 }
 

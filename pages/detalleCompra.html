@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta los detalles de tu compra de entradas para eventos. Revisa la información del evento, ubicación, fecha y sectores del estadio, y asegura tu lugar para disfrutar de la mejor música en vivo." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Mis Entradas - Detalle de Compra</title>
+</head>
+<body>
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/logo.png" alt="Logo Principal" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.html">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="miscompras.html">Mis Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main class="container py-4">
+    <h1 class="text-center mb-4">Detalle de Compra</h1>
+
+    <div class="detalleCompra">  
+
+        <div class="evento-info">
+            <h3>Evento</h3>
+            <img src="../img/bersuit.png" alt="Imagen del evento">
+            <p><strong>Ubicación:</strong> Estadio Luna Park</p>
+            <p><strong>Fecha del evento:</strong> 12 de diciembre de 2024</p>
+        </div>
+    
+        <div class="croquis">
+            <h3>Croquis del Estadio</h3>
+            <img src="../img/croquis-luna-park.png" alt="Croquis del Estadio">
+        </div>
+    
+        <div class="precios">
+            <h3>Precios por Sector</h3>
+            <ul class="list-group">
+                <li class="sector sector-preferida">Platea Preferida - $5000</li>
+                <li class="sector sector-central">Platea Central - $4500</li>
+                <li class="sector sector-platea">Platea - $4000</li>
+                <li class="sector sector-madero-baja">Platea Madero Baja - $4200</li>
+                <li class="sector sector-super-pullman">Super Pullman - $3800</li>
+                <li class="sector sector-madero-alta">Platea Madero Alta - $3700</li>
+                <li class="sector sector-corrientes-alta">Platea Corrientes Alta - $3500</li>
+                <li class="sector sector-cabecera">Platea Cabecera S/num - $3200</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer><p>Todos los Derechos Reservados</p></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
