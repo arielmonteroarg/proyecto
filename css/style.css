@@ -69,7 +69,7 @@ body {
   background-color: #A2AAA9;
 }
 
-/* estilos del header */
+/* estilos del header utilizando nesting */
 header {
   background-color: #343434;
   padding: 30px;
