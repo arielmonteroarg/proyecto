@@ -27,7 +27,7 @@
 .formContacto form .form-control, .formRegistro form .form-control {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid whitesmoke;
   border-radius: 5px;
 }
 .formContacto form .boton, .formRegistro form .boton {
@@ -137,7 +137,7 @@ main p span a:hover {
 /* estilos del footer */
 footer {
   background-color: transparent;
-  color: #fff;
+  color: whitesmoke;
   padding: 20px;
   text-align: center;
 }
@@ -204,7 +204,7 @@ footer p {
   }
 }
 
-/* estilos del formulario de contacto y del form. registro versiion UNIFICADA  con  @extend */
+/* estilos del formulario de contacto y del form. registro version UNIFICADA  con  @extend */
 /* Contenedor de la tarjeta con grid */
 .card-container {
   display: grid;

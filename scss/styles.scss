@@ -16,7 +16,7 @@
   }
  /* estilos del header */
   header {
-    background-color: $background-color-card;
+    background-color: $color-principal;
     padding: 30px;
     text-align: center;
   
@@ -31,10 +31,10 @@
   
           a {
             text-decoration: none;
-            color: $link-color;
+            color: $text-color;
   
             &:hover {
-              color: $link-hover-color;
+              color: $color-secundario;
             }
           }
         }
@@ -56,10 +56,7 @@
       color: $text-color;
       padding: 10px;
     }
-// Definición de colores
-$color-red: red;
-$color-tomato: tomato;
-$link-hover-color: #e39b02; // Un color dorado
+
 
 p span {
   a {
@@ -81,18 +78,18 @@ p span {
 // Animación del enlace
 @keyframes animar_enlace {
   0% {
-    color: red;
-    border-bottom-color: red;
+    color: $color-red;
+    border-bottom-color:  $color-red;
     transform: translateY(0);
   }
   50% {
-    color: tomato;
+    color: $color-tomato;
     transform: translateY(-5px);
-    border-bottom-color: tomato;
+    border-bottom-color: $color-tomato;
   }
   100% {
-    color: #e39b02;
-    border-bottom-color: #e39b02;
+    color:$color-secundario;
+    border-bottom-color: $color-secundario;
     transform: translateY(0);
   }
   }
@@ -100,25 +97,25 @@ p span {
  /* estilos del footer */
   footer {
     background-color: transparent;  // Deja que el degradado continúe hasta el final
-    color: #fff;
-    padding: 20px;
+    color:$text-color;
+    padding: $padding-mobile;
     text-align: center;
     p {
       text-align: center;
       color: $text-color;
-      padding: 20px;
-      background-color: $footer-background-color;
+      padding: $padding-mobile;
+      background-color: $color-principal;
     }
   }
 /* estilos del html EVENTO */
 .evento {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap:$padding-mobile;
     padding: 0 $padding-mobile;
   
     .formularioEvento {
-      background-color: $background-color-card;
+      background-color: $color-principal;
       color: $text-color;
       padding: $padding-mobile;
       text-align: center;
@@ -141,28 +138,28 @@ p span {
       .boton {
         border-radius: 15px;
         background-color: $button-color;
-        padding: 10px 20px;
+        padding: 10px $padding-mobile;
         border: none;
         cursor: pointer;
   
         &:hover {
-          background-color: $button-hover-color;
+          background-color: $color-secundario;
         }
       }
     }
-    // Media Query para tabletas
+    // MQ para tabletas
     @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        gap:$padding-tablet;
         padding: 0 $padding-tablet;
         .formularioEvento {
         padding: $padding-tablet;
         }
     }
-    // Media Query para pantallas grandes
+    // MQ para pantallas desktop
     @media (min-width: 1024px) {
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: $padding-desktop;
         padding: 0 $padding-desktop;
 
         .formularioEvento {
@@ -171,10 +168,8 @@ p span {
     }
 }
 
-/* estilos del formulario de contacto y del form. registro versiion UNIFICADA  con  @extend */
-
-
-// Aplicar el estilo a ambos formularios
+/* estilos del formulario de contacto y del form. registro version UNIFICADA  con  @extend */
+// Aplicar el estilo a ambos formularios usando extend
 .formRegistro {
     @extend %formulario;
 }
@@ -220,7 +215,7 @@ p span {
 
   .card-title {
     font-size: 1.5rem;
-    color: #343434;
+    color:$color-principal;
   }
 
   .card-text {
@@ -229,13 +224,13 @@ p span {
 
   .boton {
     border-radius: 15px;
-    background-color: #F6AB02;
-    padding: 10px 20px;
+    background-color:$button-color;
+    padding: 10px $padding-mobile;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: #e39b02;
+      background-color:$color-secundario;
     }
   }
 }
