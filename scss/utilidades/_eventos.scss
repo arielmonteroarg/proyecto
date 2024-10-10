@@ -1,0 +1,61 @@
+
+/* estilos del html EVENTO */
+.evento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:$padding-mobile;
+    padding: 0 $padding-mobile;
+  
+    .formularioEvento {
+      background-color: $color-principal;
+      color: $text-color;
+      padding: $padding-mobile;
+      text-align: center;
+      border-radius: 10px;
+  
+      h2 {
+        margin-bottom: 15px;
+      }
+  
+      p {
+        margin-bottom: 15px;
+      }
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+  
+      .boton {
+        border-radius: 15px;
+        background-color: $button-color;
+        padding: 10px $padding-mobile;
+        border: none;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: $color-secundario;
+        }
+      }
+    }
+    // MQ para tabletas
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap:$padding-tablet;
+        padding: 0 $padding-tablet;
+        .formularioEvento {
+        padding: $padding-tablet;
+        }
+    }
+    // MQ para pantallas desktop
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        gap: $padding-desktop;
+        padding: 0 $padding-desktop;
+
+        .formularioEvento {
+        padding: $padding-desktop;
+        }
+    }
+}

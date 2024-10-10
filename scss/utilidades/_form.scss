@@ -1,0 +1,16 @@
+
+@import "extend";
+
+
+
+/* estilos del formulario de contacto y del form. registro version UNIFICADA  con  @extend */
+// Aplicar el estilo a ambos formularios usando extend
+.formRegistro {
+    @extend %formulario;
+}
+
+.formContacto {
+    @extend %formulario;
+}
+
+  
